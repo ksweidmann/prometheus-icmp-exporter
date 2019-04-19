@@ -74,4 +74,4 @@ if __name__ == '__main__':
             if 'loss' in pings[host]:
                 metrics.labels(host, 'loss').set(pings[host]['loss'])
 
-        time.sleep(2)
+        time.sleep(60)
