@@ -10,7 +10,7 @@ lineres = re.compile('(^.*\s+\:\s+)(.*\=.*%)(.*)')
 
 def ping(targets):
     ret = {}    
-    cmd = ['fping', '-q', '-s', '-c3' ]
+    cmd = ['fping', '-q', '-s', '-c100' ]
     p = subprocess.Popen(' '.join(cmd)+' '+' '.join(targets), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     res = p.communicate()
     for line in res[1].split('\n'):
